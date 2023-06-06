@@ -1,20 +1,53 @@
 import {Schema, model} from 'mongoose'
+import cantor from './cantor'
+import compositor from './compositor'
+import genero from './genero'
 
 
-const UserSchema = new Schema({
-    email: {
+const MusicaSchema = new Schema({
+    nome: {
         required: true,
         type: String
     },
-    firstName: {
-        required: true,
-        type: String
+    cantor: [{
+        nome_cantor: {
+            required: true,
+            type: String
+        },
+        idade:{
+            required: true,
+            type: String
+        }
+    }],
+    compositor: {
+        nome_compositor: {
+            required: true,
+            type: String
+        },
+        idade: {
+            required: true,
+            type: String
+        }
     },
-    lastName: String
+    genero: {
+        nome_genero: {
+            required: true,
+            type: String
+        },
+
+    },
+    ouvintes: {
+        required: true,
+        type: Number
+    },
+    lancamento: {
+        required: true,
+        type:Number
+    }
 }, {
     timestamps: true
 })
 
 
-export default model('User', UserSchema)
+export default model('Musica', MusicaSchema)
 

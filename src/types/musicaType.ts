@@ -1,9 +1,16 @@
 import { ObjectId } from "mongoose";
+import { CompositorType } from "./compositorTypes";
+import { GeneroType } from "./generoTypes";
+import { CantorType } from "./cantorTypes";
 
 
 
 export interface MusicaType{
-    email: String,
-    firstName: String,
-    lastName: String
+    nome: String,
+    cantor: Array<CantorType>,
+    compositor: CompositorType,
+    genero: GeneroType,
+    lancamento: Number,
+    ouvintes: Number
+
 }

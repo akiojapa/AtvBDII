@@ -32,6 +32,30 @@ class MusicaController {
         return res.status(200).json("Successfully deleted musica!")
     }
 
+    async findGTLancamento(req: Request, res: Response) {
+        const musica = await MusicaService.findGTLancamento(req.params.ano)
+
+        return res.status(200).json(musica)
+    }
+
+    async findMusicLTOuvintes(req: Request, res: Response) {
+        const musica = await MusicaService.findMusicLTOuvintes(req.params.ouvintes)
+
+        return res.status(200).json(musica)
+    }
+
+    async findMusicbyNameCantorCompositor(req: Request, res: Response) {
+        const musica = await MusicaService.findMusicbyNameCantorCompositor(req.params.nome)
+
+        return res.status(200).json(musica)
+    }
+
+    async findMusicbyCantorCompositor(req: Request, res: Response) {
+        const musica = await MusicaService.findMusicbyCantorCompositor(req.params.nome)
+
+        return res.status(200).json(musica)
+    }
+
 }
 
 

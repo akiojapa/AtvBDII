@@ -5,7 +5,6 @@ class cantorService {
 
     async createCantor(data: CantorType) {
         const result = await cantor.create(data)
-        console.log("Usuário criado")
         return result
     }
 
@@ -23,9 +22,7 @@ class cantorService {
 
     async update(id, dataToUpdate: CantorType) {
         const updatedcantor = await cantor.findOneAndUpdate({_id: id}, {
-            email: dataToUpdate.email,
-            firstName: dataToUpdate.firstName,
-            lastName: dataToUpdate.lastName
+            nome: dataToUpdate.nome
 
         }, {new: true})
 

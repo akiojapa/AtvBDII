@@ -1,20 +1,15 @@
 import {Schema, model} from 'mongoose'
 
 
-const UserSchema = new Schema({
-    email: {
+const GeneroSchema = new Schema({
+    nome: {
         required: true,
         type: String
-    },
-    firstName: {
-        required: true,
-        type: String
-    },
-    lastName: String
+    }
 }, {
     timestamps: true
 })
 
 
-export default model('User', UserSchema)
+export default model('Genero', GeneroSchema)
 

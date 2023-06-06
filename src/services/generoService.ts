@@ -5,7 +5,6 @@ class GeneroService {
 
     async createGenero(data: GeneroType) {
         const result = await Genero.create(data)
-        console.log("Usuário criado")
         return result
     }
 
@@ -23,10 +22,7 @@ class GeneroService {
 
     async update(id, dataToUpdate: GeneroType) {
         const updatedGenero = await Genero.findOneAndUpdate({_id: id}, {
-            email: dataToUpdate.email,
-            firstName: dataToUpdate.firstName,
-            lastName: dataToUpdate.lastName
-
+            nome: dataToUpdate.nome
         }, {new: true})
 
         return updatedGenero
