@@ -1,9 +1,11 @@
 # Prova prática de banco de dados II
 Prova prática de banco de dados não relacional(MongoDB) da matéria Banco de dados II - Engenharia de Software 5º Semestre - Noturno.
 
-                Nome           |        RA
+Alunos: 
 
-Alunos: Akio Andrei Marubayashi Matera : 21034408-2
+            Nome           |        RA
+
+        Akio Andrei Marubayashi Matera : 21034408-2
         
         Luigi Siqueira Capoia : 21013423-2
         
